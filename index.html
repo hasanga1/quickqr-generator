@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free QR Code Generator — Create Custom QR Codes Instantly</title>
+<meta name="description" content="Generate free custom QR codes for URLs, WiFi, text, and more. Add your own colors and logo, then download as PNG instantly. No signup required.">
+<meta name="keywords" content="qr code generator, free qr code, custom qr code, qr code with logo, create qr code">
+<link rel="canonical" href="https://YOURDOMAIN.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free QR Code Generator — Create Custom QR Codes Instantly">
+<meta property="og:description" content="Generate free custom QR codes for URLs, WiFi, text, and more. Add your own colors and logo, then download as PNG instantly.">
+<meta property="og:url" content="https://YOURDOMAIN.com/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2216%22 fill=%22%23111827%22/><rect x=%2218%22 y=%2218%22 width=%2222%22 height=%2222%22 fill=%22white%22/><rect x=%2260%22 y=%2218%22 width=%2222%22 height=%2222%22 fill=%22white%22/><rect x=%2218%22 y=%2260%22 width=%2222%22 height=%2222%22 fill=%22white%22/></svg>">
+
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Free QR Code Generator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">◼ QuickQR</a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<!-- AD SLOT: top leaderboard. Paste your AdSense <ins> unit here once approved. -->
+<div id="ad-top" class="ad-slot" aria-hidden="true"></div>
+
+<main class="wrap">
+  <h1>Free QR Code Generator</h1>
+  <p class="subtitle">Create a custom QR code for a link, WiFi network, or plain text — free, instant, no signup.</p>
+
+  <div class="app-grid">
+    <section class="panel">
+      <label for="qr-input">Content</label>
+      <textarea id="qr-input" rows="3" placeholder="https://example.com">https://example.com</textarea>
+
+      <div class="row">
+        <div class="field">
+          <label for="qr-size">Size</label>
+          <select id="qr-size">
+            <option value="200">Small (200px)</option>
+            <option value="300" selected>Medium (300px)</option>
+            <option value="500">Large (500px)</option>
+            <option value="1000">Extra Large (1000px)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="qr-ecl">Error correction</label>
+          <select id="qr-ecl">
+            <option value="L">Low</option>
+            <option value="M" selected>Medium</option>
+            <option value="Q">Quartile</option>
+            <option value="H">High (best with logo)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="qr-fg">Foreground color</label>
+          <input type="color" id="qr-fg" value="#111827">
+        </div>
+        <div class="field">
+          <label for="qr-bg">Background color</label>
+          <input type="color" id="qr-bg" value="#ffffff">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="qr-logo">Center logo (optional)</label>
+        <input type="file" id="qr-logo" accept="image/*">
+      </div>
+
+      <button id="qr-generate" class="btn-primary">Generate QR Code</button>
+    </section>
+
+    <section class="panel preview-panel">
+      <div id="qr-canvas-wrap" class="qr-canvas-wrap"><div id="qr-render"></div></div>
+      <div class="download-row">
+        <button id="qr-download-png" class="btn-secondary" disabled>Download PNG</button>
+      </div>
+      <p class="hint">Tip: use "High" error correction when adding a logo so the code stays scannable.</p>
+    </section>
+  </div>
+
+  <!-- AD SLOT: in-content, below the tool. -->
+  <div id="ad-mid" class="ad-slot" aria-hidden="true"></div>
+
+  <section class="faq">
+    <h2>FAQ</h2>
+    <details>
+      <summary>Is this QR code generator really free?</summary>
+      <p>Yes. Generation happens entirely in your browser — nothing is uploaded to a server, and there's no limit on how many codes you create.</p>
+    </details>
+    <details>
+      <summary>Do these QR codes expire?</summary>
+      <p>No. Since the QR code encodes your content directly (a "static" code), it never expires and works forever, offline included.</p>
+    </details>
+    <details>
+      <summary>Can I use this for commercial purposes?</summary>
+      <p>Yes, codes generated here are free to use for personal or commercial projects.</p>
+    </details>
+  </section>
+</main>
+
+<!-- AD SLOT: footer / bottom of page. -->
+<div id="ad-bottom" class="ad-slot" aria-hidden="true"></div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="year"></span> QuickQR. <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
